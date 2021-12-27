@@ -1,0 +1,507 @@
+/*===========================================================
+===================== Common=================================
+=============================================================  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+}
+
+/*===========================================================
+===================== Header=================================
+=============================================================  */
+header {
+  background-color: black;
+  border-top: 2px solid red;
+}
+.header-text {
+  padding: 40px;
+}
+.header-text h1 {
+  color: red;
+  font-weight: 700;
+  font-size: 46px;
+}
+.header-text h5 {
+  color: #fff;
+}
+/*===========================================================
+===================== Demo =================================
+=============================================================  */
+.demo {
+}
+.demo-title {
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px;
+}
+.demo-body {
+}
+
+.demo-intro {
+  padding: 100px 0;
+}
+.demo-intro h2 {
+  font-weight: 700;
+}
+
+.demo-content {
+  margin-bottom: 100px;
+}
+/*===========================================================
+==================== Single Box=============================
+=============================================================  */
+.box {
+  padding: 50px 15px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+.box-icon {
+  padding: 10px 0;
+}
+.box-icon img {
+  width: 60px;
+}
+.box-body {
+  padding: 15px 5px;
+}
+.box-body h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.box-body p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.box-button button {
+  padding: 5px 15px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: black;
+}
+/*===========================================================
+===================== Demo-1 ===============================
+=============================================================  */
+#demo-1 .box {
+  position: relative;
+  border: 2px solid rgb(47, 144, 255);
+}
+#demo-1 .box::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 15px;
+  bottom: 7px;
+  border: 5px solid rgb(47, 144, 255);
+  border-width: 0 0 4px 4px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+#demo-1 .box::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  border: 5px solid rgb(47, 144, 255);
+  border-width: 4px 4px 0 0;
+  transition: all 0.5s;
+  opacity: 0;
+}
+#demo-1 .box:hover:before {
+  left: -10px;
+  bottom: -10px;
+  opacity: 1;
+}
+#demo-1 .box:hover:after {
+  top: -10px;
+  right: -10px;
+  opacity: 1;
+}
+#demo-1 .box:hover {
+  background-color: rgb(47, 144, 255);
+}
+
+#demo-1 .box:hover .box-button button {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+/*===========================================================
+===================== Demo-2 ===============================
+=============================================================  */
+#demo-2 .box {
+  position: relative;
+  background-color: rgb(255, 0, 68);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 0 #f9e506;
+  transition: ease-out 0.8s;
+}
+#demo-2 .box:hover {
+  box-shadow: inset 35rem 0 0 0 #f9e506;
+  transition: ease-out 0.8s;
+}
+#demo-2 .box:hover .box-button button {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/*===========================================================
+===================== Demo-3 ===============================
+=============================================================  */
+#demo-3 .box {
+  position: relative;
+  color: #000;
+  border-radius: 5px;
+  outline: none;
+  transition: ease-out 0.8s;
+  border: 3px solid #3498db;
+  z-index: 1;
+}
+#demo-3 .box:before {
+  transition: 0.8s all ease;
+  transition: ;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #3498db;
+}
+#demo-3 .box:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+#demo-3 .box:hover .box-button button {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*===========================================================
+===================== Demo-4 ===============================
+=============================================================  */
+#demo-4 .box {
+  position: relative;
+  border: 2px solid #3498db;
+  color: #3498db;
+  overflow: hidden;
+}
+#demo-4 .box:hover {
+  color: #fff;
+}
+#demo-4 .box:before {
+  transition: 0.8s all ease;
+  transition: ;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  right: 0%;
+  bottom: 50%;
+  opacity: 0;
+  content: "";
+  background-color: #3498db;
+}
+#demo-4 .box:hover:before {
+  transition: 0.5s all ease;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+/*===========================================================
+===================== Demo-5 ===============================
+=============================================================  */
+#demo-5 .box {
+  position: relative;
+  border: 2px solid #3498db;
+  color: #3498db;
+  overflow: hidden;
+}
+#demo-5 .box:hover {
+  color: #fff;
+}
+#demo-5 .box::before {
+  content: "";
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background-color: #3498db;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+  transition: all 0.8s;
+}
+#demo-5 .box:hover::before {
+  height: 100%;
+  transition: all 0.8s;
+}
+#demo-5 .box .box-button button {
+  background-color: #3498db;
+  transition: all 0.8s;
+}
+#demo-5 .box:hover .box-button button {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+/*===========================================================
+===================== Demo-6 ===============================
+=============================================================  */
+#demo-6 .box {
+  position: relative;
+  border: 2px solid #3498db;
+  color: #3498db;
+  overflow: hidden;
+}
+#demo-6 .box:hover {
+  color: #fff;
+}
+#demo-6 .box::before {
+  content: "";
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background-color: #3498db;
+  right: 0;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  z-index: -1;
+  transition: all 0.8s;
+}
+#demo-6 .box:hover::before {
+  height: 100%;
+  transition: all 0.8s;
+}
+#demo-6 .box .box-button button {
+  background-color: #3498db;
+  transition: all 0.8s;
+}
+#demo-6 .box:hover .box-button button {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+/*===========================================================
+===================== Demo-7 ===============================
+=============================================================  */
+#demo-7 .box {
+  background: rgb(1, 201, 194);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 201, 194, 1) 52%,
+    rgba(0, 212, 255, 1) 98%,
+    rgb(4, 195, 186) 100%
+  );
+  transition: all 0.8s;
+}
+#demo-7 .box:hover {
+  background: rgb(1, 201, 194);
+  transition: all 0.8s;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 201, 194, 1) 52%,
+    rgba(0, 212, 255, 1) 98%,
+    rgb(4, 195, 186) 100%
+  );
+  border-radius: 50%;
+}
+#demo-7 .box .box-button button {
+  transition: all 0.8s;
+  background-color: #fff;
+  color: #000;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+}
+#demo-7 .box:hover .box-button button {
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+
+  border-radius: 50%;
+}
+
+/*===========================================================
+===================== Demo-8 ===============================
+=============================================================  */
+#demo-8 .box {
+  position: relative;
+  color: #3498db;
+  overflow: hidden;
+  color: #fff;
+}
+#demo-8 .box:hover {
+  color: #3498db;
+}
+#demo-8 .box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #3498db;
+  right: 0;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  z-index: -1;
+  transition: all 0.8s;
+}
+#demo-8 .box:hover::before {
+  height: 0;
+  transition: all 0.8s;
+}
+#demo-8 .box .box-button button {
+  transition: all 0.8s;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50% 50% 0 0;
+}
+#demo-8 .box:hover .box-button button {
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50% 50% 0 0;
+}
+
+/*===========================================================
+===================== Demo-9 ===============================
+=============================================================  */
+#demo-9 .box {
+  background-color: #3498db;
+  color: #222;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+#demo-9 .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border: 5px solid #3498db;
+  transition: top, left, right, bottom, 0.3s ease-in-out;
+}
+#demo-9 .box:hover::before,
+#demo-9 .box:focus::before {
+  top: calc(5px * -2);
+  left: calc(5px * -2);
+  right: calc(5px * -2);
+  bottom: calc(5px * -2);
+}
+
+#demo-9 .box .box-button button {
+  transition: all 0.8s;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+}
+
+/*===========================================================
+===================== Demo-10 ===============================
+=============================================================  */
+#demo-10 .box {
+  color: #222;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #3498db;
+
+}
+#demo-10 span {
+  display: block;
+}
+#demo-10 .box::before,
+#demo-10 .box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #f9e506;
+  transition: all 0.8s;
+}
+#demo-10 span::after,
+#demo-10 span::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #f9e506;
+  transition: all 0.8s;
+}
+#demo-10 .box::before {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+}
+#demo-10 .box::after {
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+}
+
+#demo-10 .box:hover::before,
+#demo-10 .box:hover::after {
+  width: 100%;
+}
+
+
+#demo-10 span::before {
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 0;
+}
+#demo-10 span::after {
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 0;
+}
+
+#demo-10 span:hover::before,
+#demo-10 span:hover::after {
+  height: 100%;
+}
+
+
+#demo-10 .box .box-button button {
+  transition: all 0.8s;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+}
+
+/*===========================================================
+===================== Footer ===============================
+=============================================================  */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+  border-top: 1px solid red;
+  border-top-width: 2px;
+}
